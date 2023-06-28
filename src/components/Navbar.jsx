@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from "react-router-dom"
 
 function Navbar() {
 
@@ -11,14 +12,19 @@ function Navbar() {
         </h3>
       </div>
       <nav className='flex gap-8 justify-center items-center md:mr-32 '>
-        <a className='cursor-pointer font-semibold text-emerald-600 transition-colors
+        <NavLink
+        to='/' 
+         className='cursor-pointer font-semibold text-emerald-600 transition-colors
          duration-300 ease-in hover:text-emerald-900'>
           Inicio
-        </a>
-        <a className='cursor-pointer font-semibold text-emerald-600 transition-colors
+        </NavLink>
+
+        <NavLink
+        to='/post-linkedin' 
+        className='cursor-pointer font-semibold text-emerald-600 transition-colors
          duration-300 ease-in  hover:text-emerald-900'>
           Social
-        </a>
+        </NavLink>
       </nav>
     </div>
   )

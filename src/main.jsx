@@ -3,13 +3,30 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { ContextNews } from '../context/ContextNews.jsx'
+import Home from './pages/Home.jsx'
+import ConvertPost from './pages/ConvertPost.jsx'
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {path:"/",
+  element: <Home/>},
+  {path:"/post-linkedin",
+  element: <ConvertPost/>},
+
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
   <React.StrictMode>
-    <ContextNews>
-      <App />
-    </ContextNews>
-   
+    <RouterProvider router = {router}>
+      <ContextNews>
+        <App />
+      </ContextNews>
+    </RouterProvider>
   </React.StrictMode>,
 )

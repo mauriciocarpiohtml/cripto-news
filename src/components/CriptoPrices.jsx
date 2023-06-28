@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useCripto } from '../hooks/useCripto'
 import Coin from './Coin'
 
 
 function CriptoPrices() {
-    const [criptos, setCriptos] = useState([])
-
-    useEffect(() =>{
-        async function searchTopCriptos(){
-         const url = 'https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD'
-        const response = await fetch(url) 
-        const results = await response.json()
-        setCriptos(results.Data)
-        }
-        searchTopCriptos()
-    },[])
-
+   
+const {criptos} = useCripto()
   return (
     <>
      {/* Refactorizar esto con un map luego */}
