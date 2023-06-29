@@ -2,15 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { ContextNews } from '../context/ContextNews.jsx'
+import { ContextNews } from './context/ContextNews.jsx'
 import Home from './pages/Home.jsx'
 import ConvertPost from './pages/ConvertPost.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+ } from "react-router-dom";
 
 const router = createBrowserRouter([
   {path:"/",
@@ -23,10 +21,10 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
 
   <React.StrictMode>
-    <RouterProvider router = {router}>
-      <ContextNews>
+    <ContextNews>
+     <RouterProvider router = {router}>
         <App />
-      </ContextNews>
-    </RouterProvider>
+     </RouterProvider>
+    </ContextNews>
   </React.StrictMode>,
 )

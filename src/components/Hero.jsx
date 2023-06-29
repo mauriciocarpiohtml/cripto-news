@@ -8,7 +8,7 @@ function Hero() {
           Explora las últimas novedades del universo de las criptomonedas
         </h2>
         <p className='text-stone-600 leading-normal uppercase font-bold mt-1'> y crea contenido en 10 Segundos.</p>
-        <button className='p-3 bg-emerald-800 text-md text-white font-bold md:w-[30%] mt-3 rounded-md cursor-pointer'>
+        <button className='p-3 bg-gradient-to-r from-emerald-600 to-emerald-700 text-md text-white font-bold md:w-[30%] mt-3 rounded-md cursor-pointer'>
           Empezar
         </button>
       </div>
