@@ -5,11 +5,13 @@ const News = createContext()
 function ContextNews({children}) {
 
     const [resume, setResume] = useState('')
-    const [post, setPost] = useState([])
+    const [post, setPost] = useState('')
+
+    const [loading, setLoading] = useState(true)
 
   return (
     <News.Provider
-    value={{resume, setResume, post, setPost}}>
+    value={{resume, setResume, post, setPost, loading, setLoading}}>
       {children}
     </News.Provider>
   )
